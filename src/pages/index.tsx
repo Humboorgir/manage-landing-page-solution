@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar";
+import Slider from "../components/slider";
 
 const Home = () => {
   return (
@@ -92,37 +93,7 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="max-w-screen-xl mx-auto px-6 flex flex-col items-center mt-20">
-        <h2 className="font-bold text-center text-slate-800 text-3xl md:text-4xl mb-24">
-          What they've said
-        </h2>
-
-        <div className="bg-gray-200/40 relative w-full max-w-xl text-center px-6 pb-10 pt-14 mb-8">
-          <img
-            className="absolute bottom-[calc(100%-40px)] left-1/2 -translate-x-1/2 w-[80px] h-[80px] rounded-full"
-            src="/avatar-anisha.png"
-            alt="user avatar"
-          />
-
-          <h3 className="text-slate-800 text-lg font-bold mb-3">Anisha Li</h3>
-          <p className="text-slate-500 text-sm">
-            “Manage has supercharged our team’s workflow. The ability to
-            maintain visibility on larger milestones at all times keeps everyone
-            motivated.”
-          </p>
-        </div>
-
-        <div className="flex items-center justify-center mb-10">
-          <div className="mr-1 h-2 w-2 rounded-full border border-orange-500" />
-          <div className="mr-1 h-2 w-2 rounded-full bg-orange-500" />
-          <div className="mr-1 h-2 w-2 rounded-full border border-orange-500" />
-          <div className="h-2 w-2 rounded-full border border-orange-500" />
-        </div>
-
-        <button className="mb-8 md:mb-40 font-medium text-sm py-3 px-7 text-white rounded-full bg-orange-600">
-          Get Started
-        </button>
-      </div>
+      <Slider />
 
       <div className="bg-orange-600">
         <div className="max-w-screen-xl mx-auto py-20 px-6 flex flex-col md:flex-row md:justify-between items-center">
