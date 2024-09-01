@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Be Vietnam Pro";
+  src: local("BeVietnamPro"),
+    url(./fonts/BeVietnamPro-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-weight: 500;
+  src: local("Lato"), url(./fonts/BeVietnamPro-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-weight: 700;
+  src: local("Lato"), url(./fonts/BeVietnamPro-Bold.ttf) format("truetype");
+}
+
+body {
+  font-family: "Be Vietnam Pro";
+}
