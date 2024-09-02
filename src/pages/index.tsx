@@ -1,3 +1,4 @@
+import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import Slider from "../components/slider";
 
@@ -96,65 +97,17 @@ const Home = () => {
       <Slider />
 
       <div className="bg-orange-600">
-        <div className="max-w-screen-xl mx-auto py-20 px-6 flex flex-col md:flex-row md:justify-between items-center">
-          <h2 className="mb-7 text-4xl text-center md:text-left font-bold text-white max-w-lg">
+        <div className="max-w-screen-xl mx-auto py-16 px-6 flex flex-col md:flex-row md:justify-between items-center">
+          <h2 className="mb-7 text-[42px] leading-tight text-center md:text-left font-medium text-white max-w-lg">
             Simplify how your team works today.
           </h2>
-          <button className="font-medium text-sm py-3 px-7 text-orange-600 bg-white rounded-full">
+          <button className="font-bold text-sm py-3 px-7 text-orange-600 bg-white rounded-full">
             Get Started
           </button>
         </div>
       </div>
 
-      <div className="w-full bg-[#1E1E26]">
-        <div className="max-w-screen-xl px-4 flex flex-col mx-auto items-center pt-12 pb-8">
-          <div className="flex items-center mb-10">
-            <input
-              className="mr-3 w-full placeholder:text-slate-500 placeholder:text-sm py-3 px-5 rounded-full"
-              placeholder="Updates in your inbox..."
-            />
-            <button className="text-sm py-3 px-7 text-white font-medium rounded-full bg-orange-600">
-              GO
-            </button>
-          </div>
-
-          <div className="text-slate-200 text-sm grid grid-cols-[1fr,1fr] w-full mb-10">
-            <div className="flex flex-col items-stretch">
-              <a className="py-1.5 pl-[25%]">Home</a>
-              <a className="py-1.5 pl-[25%]">Pricing</a>
-              <a className="py-1.5 pl-[25%]">Products</a>
-              <a className="py-1.5 pl-[25%]">About us</a>
-            </div>
-            <div className="flex flex-col items-stretch">
-              <a className="py-1.5 pl-[25%]">Careers</a>
-              <a className="py-1.5 pl-[25%]">Community</a>
-              <a className="py-1.5 pl-[25%]">Privacy Policy</a>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-around w-full max-w-xs mb-14">
-            <img className="h-7 w-7" src="/icon-facebook.svg" alt="facebook" />
-            <img className="h-7 w-7" src="/icon-youtube.svg" alt="youtube" />
-            <img className="h-7 w-7" src="/icon-twitter.svg" alt="twitter" />
-            <img
-              className="h-7 w-7"
-              src="/icon-pinterest.svg"
-              alt="pinterest"
-            />
-            <img
-              className="h-7 w-7"
-              src="/icon-instagram.svg"
-              alt="instagram"
-            />
-          </div>
-
-          <img className="mb-10" src="/logo-white.svg" alt="logo" />
-
-          <span className="text-neutral-400 text-xs">
-            Copyright 2024. All Rights Reserved
-          </span>
-        </div>
-      </div>
+      <Footer />
     </>
   );
 };
