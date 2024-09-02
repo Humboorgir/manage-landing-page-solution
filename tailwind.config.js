@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        scroll: "scroll 35s forwards linear infinite",
+        scroll: "scroll 40s forwards linear infinite",
       },
       keyframes: {
         scroll: {
