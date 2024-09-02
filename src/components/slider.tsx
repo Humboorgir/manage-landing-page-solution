@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Button from "./button";
 
 const Slider = () => {
   const testimonials = [
@@ -152,10 +153,10 @@ const Slider = () => {
               className="last-of-type:mr-0 h-3 w-3"
             >
               <div
-                className="h-2 w-2 border border-orange-500 rounded-full"
+                className="h-2 w-2 border border-primary rounded-full"
                 style={{
                   backgroundColor: `${
-                    activeSlide == i ? "orange" : "transparent"
+                    activeSlide == i ? "#F3613C" : "transparent"
                   }`,
                 }}
               />
@@ -164,9 +165,7 @@ const Slider = () => {
         })}
       </div>
 
-      <button className="mb-8 md:mb-40 font-medium text-sm py-3 px-7 text-white rounded-full bg-orange-600">
-        Get Started
-      </button>
+      <Button className="mb-8 md:mb-40 font-medium">Get Started</Button>
     </div>
   );
 };
