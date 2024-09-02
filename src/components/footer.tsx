@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="w-full py-3 bg-[#1E1E26]">
+    <div className="w-full py-2 md:py-4 md:pb-6 bg-[#1E1E26]">
       <div className="max-w-screen-xl px-4 flex flex-col md:grid md:grid-cols-3 mx-auto items-center pt-12 pb-8">
         <div className="md:row-start-1 md:justify-end md:mb-auto md:col-start-3 flex items-center mb-10">
           <input
@@ -64,7 +64,7 @@ const Footer = () => {
           <img className="md:mb-20" src="/logo-white.svg" alt="logo" />
         </div>
 
-        <span className="md:ml-auto md:row-start-1 mt-auto md:col-start-3 text-neutral-400 text-xs">
+        <span className="mt-10 md:ml-auto md:row-start-1 md:mt-auto md:col-start-3 text-neutral-400 text-xs">
           Copyright 2024. All Rights Reserved
         </span>
       </div>
