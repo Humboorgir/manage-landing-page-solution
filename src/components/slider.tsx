@@ -30,6 +30,7 @@ const Slider = () => {
 
   const [activeSlide, setActiveSlide] = useState(0);
   const intervalRef = useRef<null | number>(null);
+  const timeoutRef = useRef<null | number>(null);
   const slideContainer = useRef<HTMLDivElement>(null);
 
   function calculateTranslateX(activeSlide: number) {
@@ -56,7 +57,7 @@ const Slider = () => {
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       slide();
-    }, 3000);
+    }, 5000);
 
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
@@ -136,13 +137,15 @@ const Slider = () => {
               role="button"
               onClick={() => {
                 setActiveSlide(i);
+
                 if (intervalRef.current) {
                   clearInterval(intervalRef.current);
+                  if (timeoutRef.current) clearTimeout(timeoutRef.current);
                   // pause interval (slide show) for 3s when user interacts
-                  setTimeout(() => {
+                  timeoutRef.current = setTimeout(() => {
                     intervalRef.current = setInterval(() => {
                       slide();
-                    }, 3000);
+                    }, 5000);
                   }, 3000);
                 }
               }}
