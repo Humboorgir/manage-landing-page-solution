@@ -137,6 +137,7 @@ const Slider = () => {
               aria-label="select slide"
               role="button"
               onClick={() => {
+                console.log(testimonial);
                 setActiveSlide(i);
 
                 if (intervalRef.current) {
