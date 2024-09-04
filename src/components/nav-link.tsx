@@ -13,12 +13,13 @@ const NavLink = ({ link, className }: NavLinkProps) => {
   return (
     <a
       className={twMerge(
-        "py-2.5 md:py-0.5 shrink-0 group overflow-hidden relative font-bold text-sm text-slate-600/90",
+        "block py-2.5 md:py-0.5 shrink-0 group overflow-hidden relative font-bold text-sm text-slate-600/90",
         className
       )}
       href={link.href}
     >
-      <span className="text-transparent">{link.label}</span>
+      {/* invisible label to make its container the correct width */}
+      <span className="invisible">{link.label}</span>
       <div className="duration-[250ms] group-hover:-translate-y-full transition-all absolute left-0 right-0 top-0 bottom-0">
         {link.label}
       </div>

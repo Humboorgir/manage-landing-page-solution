@@ -37,9 +37,9 @@ const AboutManage = () => {
       </div>
 
       <div className="flex flex-col items-center md:max-w-xl">
-        {perks.map(({ badge, title, content }) => {
+        {perks.map(({ badge, title, content }, i) => {
           return (
-            <div className="max-w-screen-xl pl-4 w-full mb-20">
+            <div key={i} className="max-w-screen-xl pl-4 w-full mb-20">
               <div className="md:mb-3 flex items-center bg-primary/10 md:bg-transparent rounded-l-full w-full mb-2">
                 <div className="bg-primary rounded-full py-1.5 px-5 text-white font-bold">
                   {badge}

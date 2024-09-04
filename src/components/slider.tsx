@@ -66,7 +66,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="max-w-screen-xl mx-auto px-6 flex flex-col items-center mt-20">
+    <section className="max-w-screen-xl mx-auto px-6 flex flex-col items-center mt-20">
       <h2 className="font-bold text-center text-slate-800 text-3xl md:text-4xl mb-24">
         What they've said
       </h2>
@@ -79,9 +79,12 @@ const Slider = () => {
         {/* Desktop version  */}
 
         {/* return this twice */}
-        {[0, 0].map(() => {
+        {[0, 0].map((_a, i) => {
           return (
-            <div className="hidden md:flex items-stretch space-x-8 shrink-0 animate-scroll first-of-type:pl-8">
+            <div
+              key={i}
+              className="hidden md:flex items-stretch space-x-8 shrink-0 animate-scroll first-of-type:pl-8"
+            >
               {testimonials.map((testimonial) => {
                 return (
                   <div className="bg-gray-200/40 relative shrink-0 max-w-[80vw] w-[525px] text-center px-8 pb-10 pt-16 mb-8">
@@ -109,9 +112,12 @@ const Slider = () => {
           className="flex items-stretch space-x-8 first-of-type:ml-0 last-of-type:mr-0 shrink-0 mb-8 transition-all duration-300"
           ref={slideContainer}
         >
-          {testimonials.map((testimonial) => {
+          {testimonials.map((testimonial, i) => {
             return (
-              <div className="bg-gray-200/40 relative shrink-0 max-w-[calc(95vw-32px)] w-[800px] text-center px-8 pb-10 pt-16">
+              <div
+                key={i}
+                className="bg-gray-200/40 relative shrink-0 max-w-[calc(95vw-32px)] w-[800px] text-center px-8 pb-10 pt-16"
+              >
                 <img
                   className="absolute bottom-[calc(100%-40px)] left-1/2 -translate-x-1/2 w-[80px] h-[80px] rounded-full"
                   src={testimonial.avatar}
@@ -134,6 +140,7 @@ const Slider = () => {
         {testimonials.map((testimonial, i) => {
           return (
             <div
+              key={i}
               aria-label="select slide"
               role="button"
               onClick={() => {
@@ -167,7 +174,7 @@ const Slider = () => {
       </div>
 
       <Button className="mb-8 md:mb-40 font-medium">Get Started</Button>
-    </div>
+    </section>
   );
 };
 

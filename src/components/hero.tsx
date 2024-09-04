@@ -2,10 +2,14 @@ import Button from "./button";
 
 const Hero = () => {
   return (
-    <div className="w-full grid grid-cols-1 justify-between md:grid-cols-[auto,auto] mb-16">
+    <section
+      className="w-full grid grid-cols-1 justify-between md:grid-cols-[auto,auto]
+    max-w-screen-xl mx-auto px-6 mb-20"
+    >
       <img
         className="w-full max-w-xs mx-auto md:max-w-lg md:min-w-[400px] "
         src="/illustration-intro.svg"
+        alt="introduction illustration"
       />
 
       <div
@@ -21,7 +25,7 @@ const Hero = () => {
         </p>
         <Button>Get Started</Button>
       </div>
-    </div>
+    </section>
   );
 };
 
